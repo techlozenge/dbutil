@@ -1,0 +1,6 @@
+
+javac dbutil/DbLauncher.java
+javac dbutil/DbFrontend.java
+javac dbutil/DbUtil.java
+
+java dbutil/DbLauncher
