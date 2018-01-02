@@ -17,6 +17,7 @@ public class DbUtil {
     private String mySqlDriver = "com.mysql.jdbc.Driver";
     private String mySqlUrl = "jdbc:mysql://localhost:3306/student_api?autoReconnect=true&useSSL=false";
     
+    // caller must handle SQLException!
     public Connection getMySqlConnection() throws SQLException {
         System.out.println("... [DbUtil] Attempting to obtain MySQL connection");
         this.conn = null;
@@ -27,6 +28,7 @@ public class DbUtil {
             Class.forName(mySqlDriver);
             this.conn = DriverManager.getConnection(mySqlUrl, connProps);
         } 
+        // lazy lazy lazy but okay for now...
         catch (Exception e)
         {
             System.err.println("getConnection encountered an exception");

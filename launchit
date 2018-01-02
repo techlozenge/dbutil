@@ -1,6 +1,8 @@
-
+# compile source
 javac dbutil/DbLauncher.java
 javac dbutil/DbFrontend.java
 javac dbutil/DbUtil.java
-
+# execute launcher class
 java dbutil/DbLauncher
+
+
